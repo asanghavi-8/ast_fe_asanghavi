@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Astound Digital offers innovative solutions and high-quality products that cater to your needs. Explore our services, products, and more!">
+    <meta name="keywords" content="Astound Digital, products, services, quality, customer satisfaction, innovation, consulting, custom solutions">
+    <meta name="author" content="Astound Digital">
+    <title>Astound Digital</title>
+    <link rel="shortcut icon" href="./images/AD_Symbol_Black_RGB.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
-        <header>
+        <header role="navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Why Us?</a></li>
-                <li><a href="#">What We Do?</a></li>
-                <li><a href="#">Trending News</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#why-us">Why Us?</a></li>
+                <li><a href="#what-we-do">What We Do?</a></li>
+                <li><a href="#news">Trending News</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#tos">Terms of Use</a></li>
             </ul>
         </header>
 
-        <section id="home">
+        <section id="home" role="banner">
             <div id="slideshow-container">
                 <div class="slide fade">
-                    <img src="./images/1.jpg" style="width: 100%;" alt="Image 1">
+                    <img src="./images/1.jpg" style="width: 100%;" alt="black-background">
                     <div class="text">
                         <h1>Welcome to Astound Digital</h1>
                         <p>_____Navigating what's next.</p>
                     </div>
                 </div>
                 <div class="slide fade">
-                    <img src="./images/2.jpg" style="width: 100%;" alt="Image 2">
+                    <img src="./images/2.jpg" style="width: 100%;" alt="">
                     <div class="text">
                         <h1>Innovative Solutions</h1>
                         <p>Delivering top-notch services to meet your needs.</p>
                     </div>
                 </div>
                 <div class="slide fade">
-                    <img src="./images/3.jpg" style="width: 100%;" alt="Image 3">
+                    <img src="./images/3.jpg" style="width: 100%;" alt="">
                     <div class="text">
                         <h1>Quality First</h1>
                         <p>We focus on quality and customer satisfaction.</p>
                     </div>
                 </div>
                 <div class="slide fade">
-                    <img src="./images/4.jpg" style="width: 100%;" alt="Image 4">
+                    <img src="./images/4.jpg" style="width: 100%;" alt="">
                     <div class="text">
                         <h1>Join Us Today</h1>
                         <p>Experience excellence in every product we offer.</p>
@@ -117,12 +120,12 @@
         <section id="contact-us">
             <h1>Contact Us</h1>
             <form action="">
-                <input type="text" placeholder="Your Name" id="name" required>
-                <input type="email" placeholder="Your Email" id="email" required>
-                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                <input type="submit" class="send-btn" name="button" value="Send Message"></input>
+                <input type="text" placeholder="Your Name" id="name" required aria-required="true">
+                <input type="email" placeholder="Your Email" id="email" required aria-required="true">
+                <textarea name="message" id="message" placeholder="Your Message" required aria-required="true"></textarea>
+                <input type="submit" class="send-btn" name="button" value="Send Message"></input>                
             </form>
-            
+            <p class="error">Enter a valid email!</p>
             
         </section>
 
@@ -143,8 +146,8 @@
         <footer>
                 <p>&copy 2024 Astound Digital. All Rights Reserved.</p>
                 <div id="links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#tos">Terms of Use</a>
                 </div>
         </footer>
     

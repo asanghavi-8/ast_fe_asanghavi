@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
   margin: 0;
@@ -68,12 +70,11 @@ section {
 /* for carousel */
 #slideshow-container {
     position: relative;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    width: 100vw; 
+    height: 100vh; 
     overflow: hidden;
     margin: 0;
-    padding: 0; /* Hide any overflow */
-    background-color: black;
+    padding: 0; 
     object-fit: cover;
 }
 
@@ -82,26 +83,23 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Make sure it fills the container width */
-    height: 100%; /* Make sure it fills the container height */
-    object-fit: cover; /* Ensure the image covers the whole container without stretching */
-    aspect-ratio: 0.5;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
 }
 
-  
 .text {
     position: absolute;
-    top: 50%;            /* Vertical centering */
-    left: 50%;           /* Horizontal centering */
-    transform: translate(-50%, -50%); /* Adjust for true center alignment */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 20px;
-    
+    font-size: 2rem;
     padding: 10px;
-    width: 100%;         /* Optional: Set a max-width or 100% */
-  }
-
+    width: 100%;
+  
+}
 
 .fade {
     animation-name: fade;
@@ -178,11 +176,11 @@ section {
 }
 
 #what-we-do .cards h3 {
-    margin: 0 0 10px 0; /* Optional: Adjust space below the h3 */
+    margin: 0 0 10px 0; 
 }
 
 #what-we-do .cards p {
-    margin: 0; /* Remove margin to align with the h3 */
+    margin: 0; 
 }
 
 #contact-us, #privacy h1, #tos h1 {
@@ -225,10 +223,15 @@ section {
     border-radius: 0;
 }
 
-#contact-us button:hover {
+#contact-us .send-btn:hover {
     background-color: #444;
 }
 
+#contact-us .error {
+    margin-top: -5px;
+    color: red;
+    display: none;
+}
 
 #privacy, #tos{
     margin-top: 110px;
@@ -254,6 +257,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+
+    html, body {
+        height: 100%; 
+    }
+    
     header ul a{
         display: none;
     }
@@ -280,8 +288,21 @@ footer {
        line-height: 40px;
     }
 
-    
+    #slideshow-container {
+        height: 150px !important;
+        
+    }
 
+    #slideshow-container img {
+        height: 100%;  /* Ensure the image takes full height of the container */
+        object-fit: cover;
+    }
+
+    .text {
+        font-size: 1.2rem; /* Even smaller font size for very small screens */
+        padding: 6px;
+        top: 40%;
+    }
 
 }
 
@@ -303,11 +324,36 @@ footer {
     }
 
     #slideshow-container {
-        height: 42.3vh;
+        height: 32.3vh;
     }
 
-    
+    #slideshow-container img {
+        height: 100%;  /* Ensure the image takes full height of the container */
+        object-fit: cover;
+    }
+
+    .text {
+        padding: 6px;
+        top: 40%;
+    }
+
 }
+
+/* @media (max-width: 1600px) {
+    #slideshow-container {
+        height: 55vh;
+    }
+
+    #slideshow-container img {
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    .text {
+        padding: 6px;
+        top: 40%;
+    }
+} */
 
 @media (min-width: 480px) {
     #why-us .cards{
