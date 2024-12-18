@@ -54,7 +54,8 @@ header ul a:hover, footer a:hover {
 }
 
 section {
-    margin: 5px;  /* temporary for readablity */   
+    margin: 5px; 
+    line-height: 20px;   
 }
 
 #home {
@@ -71,7 +72,7 @@ section {
 #slideshow-container {
     position: relative;
     width: 100vw; 
-    height: 100vh; 
+    height: 80vh; 
     overflow: hidden;
     margin: 0;
     padding: 0; 
@@ -86,6 +87,7 @@ section {
     width: 100%; 
     height: 100%;
     object-fit: cover; 
+    object-position: bottom center;
 }
 
 .text {
@@ -95,7 +97,7 @@ section {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10px;
     width: 100%;
   
@@ -118,9 +120,10 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%;
+   
 }
 
-#why-us h1, #what-we-do h1, #news h1 {
+#why-us h1, #what-we-do h1, #news h1, #prod-data h1 {
     margin-top: 4vw;
 }
 
@@ -128,10 +131,11 @@ section {
     margin: 4vw;
     column-gap: 4vw;
     display: grid;
-    
+    line-height: 20px;
 }
 
-.cards div{
+
+.cards div, .card{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,11 +161,17 @@ section {
     width: 100%;
     margin: 0;
     padding: 0;
+    line-height: 20px;
 }
 
 #what-we-do p {
-    width: 96%;  /* Optional: Adjust width if you want to limit the text width */
-    margin: 0 auto;
+    width: 95%;  
+    margin: 0;
+    
+}
+
+#what-we-do h1{
+    margin-bottom: 28px;
 }
 
 #what-we-do .cards {
@@ -179,16 +189,35 @@ section {
     margin: 0 0 10px 0; 
 }
 
+
 #what-we-do .cards p {
     margin: 0; 
 }
+
+
+#why-us .cards, #news .cards{
+    margin-top: 32px;
+}
+/* 
+#prod-data .cards .card img{
+    max-width: 200px;  
+    max-height: 300px; 
+    object-fit: contain;
+    margin: 0; 
+} */
+
+/* #contact-us, #privacy h1, #tos h1, #prod-data h1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;  
+} */
 
 #contact-us, #privacy h1, #tos h1 {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
 #contact-us {
@@ -228,10 +257,11 @@ section {
 }
 
 #contact-us .error {
+    display: none;
     margin-top: -5px;
     color: red;
-    display: none;
 }
+
 
 #privacy, #tos{
     margin-top: 110px;
@@ -339,7 +369,7 @@ footer {
 
 }
 
-/* @media (max-width: 1600px) {
+@media (max-width: 1200px) {
     #slideshow-container {
         height: 55vh;
     }
@@ -353,7 +383,7 @@ footer {
         padding: 6px;
         top: 40%;
     }
-} */
+}
 
 @media (min-width: 480px) {
     #why-us .cards{
@@ -366,6 +396,11 @@ footer {
 
     #news .cards {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #product-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 5vh;
     }
 
     
