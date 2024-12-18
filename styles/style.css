@@ -1,0 +1,372 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+header, footer {
+    background-color: #1a1a1a;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+} 
+
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 10px;
+    font-size: 1rem;
+    gap: 27px;
+    
+}
+
+
+header ul a, footer a {
+    padding: 2px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header ul a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 5px;  /* temporary for readablity */   
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+}
+
+
+/* for carousel */
+#slideshow-container {
+    position: relative;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0; 
+    object-fit: cover;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    width: 100%;
+  
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+
+#why-us, #news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#why-us h1, #what-we-do h1, #news h1 {
+    margin-top: 4vw;
+}
+
+.cards{
+    margin: 4vw;
+    column-gap: 4vw;
+    display: grid;
+    
+}
+
+.cards div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.cards div h3{
+    margin: 10px;
+}
+
+#what-we-do {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#what-we-do p {
+    width: 96%;  /* Optional: Adjust width if you want to limit the text width */
+    margin: 0 auto;
+}
+
+#what-we-do .cards {
+    margin-top: 1vw;
+}
+
+#what-we-do .cards div{
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#what-we-do .cards h3 {
+    margin: 0 0 10px 0; 
+}
+
+#what-we-do .cards p {
+    margin: 0; 
+}
+
+#contact-us, #privacy h1, #tos h1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#contact-us {
+    margin: 70px auto;
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#contact-us form input, textarea{
+    border: 1px solid rgb(219, 218, 218);
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 9px;
+    width: 70%;
+    font-family: 'Arial', sans-serif;
+}
+
+#contact-us .send-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    cursor: pointer;
+    width: 134px;
+    border-radius: 0;
+}
+
+#contact-us .send-btn:hover {
+    background-color: #444;
+}
+
+#contact-us .error {
+    margin-top: -5px;
+    color: red;
+    display: none;
+}
+
+#privacy, #tos{
+    margin-top: 110px;
+}
+
+#privacy p, #privacy h4, #tos p {
+    margin-left: 10px;
+} 
+
+footer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 9px;
+    padding-bottom: 28px;
+}
+
+#links {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 480px) {
+
+    html, body {
+        height: 100%; 
+    }
+    
+    header ul a{
+        display: none;
+    }
+    .cards{
+        row-gap: 4vw;
+        grid-template-columns: 1fr;
+    }
+
+
+    #what-we-do .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #what-we-do .cards div{
+        width: 60%;
+    }
+
+    #news h1 {
+       width: 50%;
+       text-align: center;
+       line-height: 40px;
+    }
+
+    #slideshow-container {
+        height: 150px !important;
+        
+    }
+
+    #slideshow-container img {
+        height: 100%;  /* Ensure the image takes full height of the container */
+        object-fit: cover;
+    }
+
+    .text {
+        font-size: 1.2rem; /* Even smaller font size for very small screens */
+        padding: 6px;
+        top: 40%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    header ul {
+        display: flex;
+        flex-wrap: wrap;  
+        justify-content: center; 
+        width: 80%;
+    }
+
+    header ul a {
+        flex-basis: 50%;
+        text-align: center;  
+    }
+
+    header ul a:nth-last-child(-n+2) {
+        flex-basis: 100%; 
+    }
+
+    #slideshow-container {
+        height: 32.3vh;
+    }
+
+    #slideshow-container img {
+        height: 100%;  /* Ensure the image takes full height of the container */
+        object-fit: cover;
+    }
+
+    .text {
+        padding: 6px;
+        top: 40%;
+    }
+
+}
+
+/* @media (max-width: 1600px) {
+    #slideshow-container {
+        height: 55vh;
+    }
+
+    #slideshow-container img {
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    .text {
+        padding: 6px;
+        top: 40%;
+    }
+} */
+
+@media (min-width: 480px) {
+    #why-us .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #what-we-do .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #news .cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    
+}
