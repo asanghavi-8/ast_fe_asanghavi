@@ -361,10 +361,10 @@ footer {
         top: 40%;
     }
 
-    /* header #logo {
-        height: 2.5vh;
+    header #logo {
+        height: 1.5vh;
         padding-top: 20px;
-    } */
+    }
 
 }
 
@@ -405,10 +405,10 @@ footer {
         width: 96%;
     }
 
-    /* header #logo {
+    header #logo {
         height: 4vh;
         padding-top: 20px;
-    } */
+    }
     
 
 }
