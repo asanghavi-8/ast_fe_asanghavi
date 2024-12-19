@@ -71,54 +71,54 @@ form.addEventListener('submit', validateForm)
 
 //Fetching Product Data
 
-async function fetchData() {
-  try {
-    const response = await fetch("https://dummyjson.com/products?limit=10");
+// async function fetchData() {
+//   try {
+//     const response = await fetch("https://dummyjson.com/products?limit=10");
 
-    if (!response.ok) {
-      throw new Error('Error in fetching data.');
-    }
+//     if (!response.ok) {
+//       throw new Error('Error in fetching data.');
+//     }
 
-    const data = await response.json();
+//     const data = await response.json();
 
-    const cardsContainer = document.querySelector('#product-cards');
+//     const cardsContainer = document.querySelector('#product-cards');
 
-    data.products.forEach(product => {
-      const card = document.createElement('div');
-      card.classList.add('card');
+//     data.products.forEach(product => {
+//       const card = document.createElement('div');
+//       card.classList.add('card');
       
-      const title = document.createElement('h3');
-      title.textContent = product.title; 
+//       const title = document.createElement('h3');
+//       title.textContent = product.title; 
       
     
-      const description = document.createElement('p');
-      description.textContent = product.description || 'No description available'; 
+//       const description = document.createElement('p');
+//       description.textContent = product.description || 'No description available'; 
       
   
-      const price = document.createElement('p');
-      price.textContent = `Price: $${product.price}`; 
-      price.classList.add('bold');
+//       const price = document.createElement('p');
+//       price.textContent = `Price: $${product.price}`; 
+//       price.classList.add('bold');
 
     
-      const image = document.createElement('img');
-      image.src = product.images[0]; 
-      image.alt = product.name; 
-      image.style.width = '100%';
+//       const image = document.createElement('img');
+//       image.src = product.images[0]; 
+//       image.alt = product.name; 
+//       image.style.width = '100%';
       
       
-      card.appendChild(image);  
-      card.appendChild(title);  
-      card.appendChild(description); 
-      card.appendChild(price);
+//       card.appendChild(image);  
+//       card.appendChild(title);  
+//       card.appendChild(description); 
+//       card.appendChild(price);
 
-      cardsContainer.appendChild(card);
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
+//       cardsContainer.appendChild(card);
+//     });
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-fetchData();
+// fetchData();
 
 
 

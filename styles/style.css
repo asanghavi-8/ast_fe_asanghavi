@@ -214,7 +214,7 @@ section {
     margin-top: 32px;
 }
 
-.bold{
+/* .bold{
     font-weight: bold;
 }
 
@@ -223,7 +223,7 @@ section {
     height: 260px; 
     object-fit: contain;
     margin: 0; 
-}
+} */
 
 #contact-us, #privacy h1, #tos h1, #prod-data h1 {
     display: flex;
