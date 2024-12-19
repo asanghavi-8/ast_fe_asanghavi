@@ -32,18 +32,18 @@ header {
 } 
 
 /* Logo */
-/* 
+
 header #logo-container{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 
 header #logo {
     height: 6vh;
     padding-top: 20px;
-} */
+}
 
 /* Navbar */
 
@@ -218,11 +218,15 @@ section {
     font-weight: bold;
 }
 
-#prod-data .cards .card img{
+#product-cards .card img{
     max-width: 200px;  
     height: 260px; 
     object-fit: contain;
     margin: 0; 
+}
+
+#product-cards .card p{
+    margin: 6px;
 }
 
 #contact-us, #privacy h1, #tos h1, #prod-data h1 {

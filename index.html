@@ -9,14 +9,14 @@
     <title>Astound Digital</title>
     <link rel="shortcut icon" href="./images/AD_Symbol_Black_RGB.svg" type="image/x-icon">
 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="canonical" href="https://astounddigital.com/">
 </head>
 <body>
         <header role="navigation">
-            <!-- <div id="logo-container">
+            <div id="logo-container">
                 <img src="./images/AD_FullLogo_White_RBG.svg" id="logo" alt="Astound-Digital-logo">
-            </div> -->
+            </div>
             <ul>
                 <li><a href="#home" aria-label="Home">Home</a></li>
                     <li><a href="#why-us" aria-label="Why Us?">Why Us?</a></li>
@@ -124,14 +124,13 @@
 
         <section id="prod-data" role="region">
             <h1>Product Data</h1>
-            <div class="cards" id="product-cards">
-            </div>
+            <div class="cards" id="product-cards"></div>
         </section>
         
         <section id="contact-us">
             <h1>Contact Us</h1>
             <form action="" role="form" aria-labelledby="contact-form">
-                <input type="text" placeholder="Your Name" id="name" required aria-required="true" onkeydown="return /[a-z\s]/i.test(event.key)" >
+                <input type="text" placeholder="Your Name" id="name" required aria-required="true" onpaste="return false" onkeydown="return /[a-z\s]/i.test(event.key)" >
                 <p class="error"  role="alert" id="name-error">Enter a valid Name!</p>
                 <input type="email" placeholder="Your Email" id="email" required aria-required="true">
                 <p class="error"  role="alert" id="email-error">Enter a valid email!</p>

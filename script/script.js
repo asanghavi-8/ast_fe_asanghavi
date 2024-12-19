@@ -80,39 +80,42 @@ async function fetchData() {
     }
 
     const data = await response.json();
+    console.log(data);
 
     const cardsContainer = document.querySelector('#product-cards');
-
-    data.products.forEach(product => {
-      const card = document.createElement('div');
-      card.classList.add('card');
+    if(data && data.products){
+      data.products.forEach(product => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        
+        const title = document.createElement('h3');
+        title.textContent = product.title; 
+        
       
-      const title = document.createElement('h3');
-      title.textContent = product.title; 
-      
+        const description = document.createElement('p');
+        description.textContent = product.description || 'No description available'; 
+        
     
-      const description = document.createElement('p');
-      description.textContent = product.description || 'No description available'; 
-      
+        const price = document.createElement('p');
+        price.textContent = `Price: $${product.price}`; 
+        price.classList.add('bold');
   
-      const price = document.createElement('p');
-      price.textContent = `Price: $${product.price}`; 
-      price.classList.add('bold');
-
+      
+        const image = document.createElement('img');
+        image.src = product.images[0]; 
+        image.alt = product.name; 
+        image.style.width = '100%';
+        
+        
+        card.appendChild(image);  
+        card.appendChild(title);  
+        card.appendChild(description); 
+        card.appendChild(price);
+  
+        cardsContainer.appendChild(card);
+      });
+    }
     
-      const image = document.createElement('img');
-      image.src = product.images[0]; 
-      image.alt = product.name; 
-      image.style.width = '100%';
-      
-      
-      card.appendChild(image);  
-      card.appendChild(title);  
-      card.appendChild(description); 
-      card.appendChild(price);
-
-      cardsContainer.appendChild(card);
-    });
   } catch (error) {
     console.error(error);
   }
