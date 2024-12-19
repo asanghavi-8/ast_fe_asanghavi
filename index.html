@@ -10,14 +10,19 @@
     <link rel="shortcut icon" href="./images/AD_Symbol_Black_RGB.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="canonical" href="https://astounddigital.com/">
 </head>
 <body>
         <header role="navigation">
+            <div id="logo-container">
+                <img src="./images/AD_FullLogo_White_RBG.svg" id="logo" alt="Astound-Digital-logo">
+            </div>
             <ul>
                 <li><a href="#home" aria-label="Home">Home</a></li>
                     <li><a href="#why-us" aria-label="Why Us?">Why Us?</a></li>
                     <li><a href="#what-we-do" aria-label="What We Do?">What We Do?</a></li>
                     <li><a href="#news" aria-label="Trending News">Trending News</a></li>
+                    <li><a href="#prod-data" aria-label="Product Data">Product Data</a></li>
                     <li><a href="#contact-us" aria-label="Contact Us">Contact Us</a></li>
                     <li><a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a></li>
                     <li><a href="#tos" aria-label="Terms of Use">Terms of Use</a></li>
@@ -27,28 +32,28 @@
         <section id="home" role="banner" aria-labelledby="home-banner">
             <div id="slideshow-container" aria-live="polite">
                 <div class="slide fade" role="region" aria-labelledby="home-banner">
-                    <img src="./images/1.jpg" style="width: 100%;" alt="home-banner1">
+                    <img src="./images/1.jpg" style="width: 100%;" alt="home-banner1" loading="lazy">
                     <div class="text">
                         <h1>Welcome to Astound Digital</h1>
                         <p>_____Navigating what's next.</p>
                     </div>
                 </div>
                 <div class="slide fade" role="region" aria-labelledby="innovative-solutions-banner">
-                    <img src="./images/2.jpg" style="width: 100%;" alt="home-banner1">
+                    <img src="./images/2.jpg" style="width: 100%;" alt="home-banner2" loading="lazy">
                     <div class="text">
                         <h1>Innovative Solutions</h1>
                         <p>Delivering top-notch services to meet your needs.</p>
                     </div>
                 </div>
                 <div class="slide fade"  role="region" aria-labelledby="quality-first-banner">
-                    <img src="./images/3.jpg" style="width: 100%;" alt="home-banner1">
+                    <img src="./images/3.jpg" style="width: 100%;" alt="home-banner3" loading="lazy">
                     <div class="text">
                         <h1>Quality First</h1>
                         <p>We focus on quality and customer satisfaction.</p>
                     </div>
                 </div>
                 <div class="slide fade" role="region" aria-labelledby="join-us-banner">
-                    <img src="./images/4.jpg" style="width: 100%;" alt="home-banner1">
+                    <img src="./images/4.jpg" style="width: 100%;" alt="home-banner4" loading="lazy">
                     <div class="text">
                         <h1>Join Us Today</h1>
                         <p>Experience excellence in every product we offer.</p>
@@ -117,21 +122,26 @@
             </div>
         </section>
 
-        <!-- <section id="prod-data" role="region">
+        <section id="prod-data" role="region">
             <h1>Product Data</h1>
             <div class="cards" id="product-cards">
             </div>
-        </section> -->
+        </section>
         
         <section id="contact-us">
             <h1>Contact Us</h1>
             <form action="" role="form" aria-labelledby="contact-form">
-                <input type="text" placeholder="Your Name" id="name" required aria-required="true">
+                <input type="text" placeholder="Your Name" id="name" required aria-required="true" onkeydown="return /[a-z\s]/i.test(event.key)" >
+                <p class="error"  role="alert" id="name-error">Enter a valid Name!</p>
                 <input type="email" placeholder="Your Email" id="email" required aria-required="true">
-                <textarea name="message" id="message" placeholder="Your Message" required aria-required="true"></textarea>
-                <input type="submit" class="send-btn" name="button" value="Send Message"></input>                
+                <p class="error"  role="alert" id="email-error">Enter a valid email!</p>
+                <textarea  name="message" id="message" placeholder="Your Message" required aria-required="true"></textarea>
+                <p class="error"  role="alert" id="message-error">Message must be between 10 to 200 characters.</p>
+                <input type="submit" class="send-btn" name="button" value="Send Message"></input>           
+                
+                
             </form>
-            <p class="error"  role="alert">Enter a valid email!</p>
+            
             
         </section>
 

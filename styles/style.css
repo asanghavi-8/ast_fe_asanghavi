@@ -28,7 +28,24 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
 } 
+
+/* Logo */
+
+header #logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #logo {
+    height: 6vh;
+    padding-top: 20px;
+}
+
+/* Navbar */
 
 header ul{
     display: flex;
@@ -38,9 +55,8 @@ header ul{
     padding: 10px;
     font-size: 1rem;
     gap: 27px;
-    
+    margin: 12px;
 }
-
 
 header ul a, footer a {
     padding: 2px;
@@ -54,7 +70,6 @@ header ul a:hover, footer a:hover {
 }
 
 section {
-    margin: 5px; 
     line-height: 20px;   
 }
 
@@ -87,8 +102,9 @@ section {
     width: 100%; 
     height: 100%;
     object-fit: cover; 
-    object-position: bottom center;
 }
+
+
 
 .text {
     position: absolute;
@@ -100,7 +116,6 @@ section {
     font-size: 1.5rem;
     padding: 10px;
     width: 100%;
-  
 }
 
 .fade {
@@ -198,27 +213,25 @@ section {
 #why-us .cards, #news .cards{
     margin-top: 32px;
 }
-/* 
+
+.bold{
+    font-weight: bold;
+}
+
 #prod-data .cards .card img{
     max-width: 200px;  
-    max-height: 300px; 
+    height: 260px; 
     object-fit: contain;
     margin: 0; 
-} */
+}
 
-/* #contact-us, #privacy h1, #tos h1, #prod-data h1 {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;  
-} */
-
-#contact-us, #privacy h1, #tos h1 {
+#contact-us, #privacy h1, #tos h1, #prod-data h1 {
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;  
 }
+
 
 #contact-us {
     margin: 70px auto;
@@ -242,6 +255,10 @@ section {
     font-family: 'Arial', sans-serif;
 }
 
+#contact-us textarea{
+    margin-bottom: 8px; 
+}
+
 #contact-us .send-btn {
     background-color: #333;
     color: white;
@@ -258,10 +275,22 @@ section {
 
 #contact-us .error {
     display: none;
-    margin-top: -5px;
+   
+}
+
+
+
+.error.active {
+    display: block !important;
+    margin-top: -3px;
     color: red;
 }
 
+/* .error.active input {
+    display: block !important;
+    margin-top: -7px;
+    color: red;
+} */
 
 #privacy, #tos{
     margin-top: 110px;
@@ -324,14 +353,19 @@ footer {
     }
 
     #slideshow-container img {
-        height: 100%;  /* Ensure the image takes full height of the container */
+        height: 100%; 
         object-fit: cover;
     }
 
     .text {
-        font-size: 1.2rem; /* Even smaller font size for very small screens */
+        font-size: 1rem;
         padding: 6px;
         top: 40%;
+    }
+
+    header #logo {
+        height: 2.5vh;
+        padding-top: 20px;
     }
 
 }
@@ -358,14 +392,21 @@ footer {
     }
 
     #slideshow-container img {
-        height: 100%;  /* Ensure the image takes full height of the container */
+        height: 100%;  
         object-fit: cover;
     }
 
     .text {
         padding: 6px;
-        top: 40%;
+        top: 43%;
+        font-size: 1.2rem;
     }
+
+    header #logo {
+        height: 4vh;
+        padding-top: 20px;
+    }
+    
 
 }
 

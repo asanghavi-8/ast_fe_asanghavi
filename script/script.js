@@ -22,7 +22,11 @@ function validateForm(event) {
   const nameField = document.querySelector('#name');
   const emailField = document.querySelector('#email');
   const messageField = document.querySelector('#message');
-  const error = document.querySelector('.error');
+  const nameError = document.querySelector('#name-error');
+  const emailError = document.querySelector('#email-error');
+  const messageError = document.querySelector('#message-error');
+
+ 
   let isValid = true;
 
 
@@ -31,30 +35,34 @@ function validateForm(event) {
 
   if (!nameField.value.match(namePattern)) {
     isValid = false;
-    error.innerText = 'Enter a valid name!';
-    error.style.display = 'block';
+    nameError.classList.add('active');
+    console.log("name")
+  } else {
+    nameError.classList.remove('active');
   }
 
   if (!emailField.value.match(emailPattern)) {
     isValid = false;
-    error.innerText = 'Enter a valid email!';
-    error.style.display = 'block';
+    emailError.classList.add('active');
+    console.log("e")
+  } else {
+    emailError.classList.remove('active');
   }
 
-  if (messageField.value.length < 10 || message.value.length > 200) {
+  if (messageField.value.length < 10 || messageField.value.length > 200) {
     isValid = false;
-    error.innerText = 'Invalid Message: Should be between 10 to 200 characters!';
-    error.style.display = 'block';
+    messageError.classList.add('active');
+    console.log("m")
+  } else {
+    messageError.classList.remove('active');
   }
 
-  if(isValid){
-    window.alert("Hi " + name.value + "! Thank you for contacting us!");
-    error.innerHTML = '';
-    error.style.display = 'none';
+  if (isValid) {
+    window.alert("Hi " + nameField.value + "! Thank you for contacting us!");
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
   }
-  name.value = '';
-  email.value = '';
-  message.value = '';
   
 }
 
@@ -63,53 +71,54 @@ form.addEventListener('submit', validateForm)
 
 //Fetching Product Data
 
-// async function fetchData() {
-//   try {
-//     const response = await fetch("https://dummyjson.com/products?limit=10");
+async function fetchData() {
+  try {
+    const response = await fetch("https://dummyjson.com/products?limit=10");
 
-//     if (!response.ok) {
-//       throw new Error('Error in fetching data.');
-//     }
+    if (!response.ok) {
+      throw new Error('Error in fetching data.');
+    }
 
-//     const data = await response.json();
+    const data = await response.json();
 
-//     const cardsContainer = document.querySelector('#product-cards');
+    const cardsContainer = document.querySelector('#product-cards');
 
-//     data.products.forEach(product => {
-//       const card = document.createElement('div');
-//       card.classList.add('card');
+    data.products.forEach(product => {
+      const card = document.createElement('div');
+      card.classList.add('card');
       
-//       const title = document.createElement('h3');
-//       title.textContent = product.title; 
+      const title = document.createElement('h3');
+      title.textContent = product.title; 
       
     
-//       const description = document.createElement('p');
-//       description.textContent = product.description || 'No description available'; 
+      const description = document.createElement('p');
+      description.textContent = product.description || 'No description available'; 
       
   
-//       const price = document.createElement('p');
-//       price.textContent = `Price: $${product.price}`; 
+      const price = document.createElement('p');
+      price.textContent = `Price: $${product.price}`; 
+      price.classList.add('bold');
 
     
-//       const image = document.createElement('img');
-//       image.src = product.images[0]; 
-//       image.alt = product.name; 
-//       image.style.width = '100%';
+      const image = document.createElement('img');
+      image.src = product.images[0]; 
+      image.alt = product.name; 
+      image.style.width = '100%';
       
       
-//       card.appendChild(image);  
-//       card.appendChild(title);  
-//       card.appendChild(description); 
-//       card.appendChild(price);
+      card.appendChild(image);  
+      card.appendChild(title);  
+      card.appendChild(description); 
+      card.appendChild(price);
 
-//       cardsContainer.appendChild(card);
-//     });
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+      cardsContainer.appendChild(card);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-// fetchData();
+fetchData();
 
 
 
