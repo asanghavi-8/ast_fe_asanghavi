@@ -3,49 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Astound Digital offers innovative solutions and high-quality products that cater to your needs. Explore our services, products, and more!">
+    <meta name="keywords" content="Astound Digital, product development,consulting services, reliable quality, customer satisfaction, innovation, custom solutions">
+    <meta name="author" content="Astound Digital">
+    <title>Astound Digital</title>
+    <link rel="shortcut icon" href="./images/AD_Symbol_Black_RGB.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="canonical" href="https://astounddigital.com/">
 </head>
 <body>
-    
-        <header>
+        <header role="navigation">
+            <!-- <div id="logo-container">
+                <img src="./images/AD_FullLogo_White_RBG.svg" id="logo" alt="Astound-Digital-logo">
+            </div> -->
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Why Us?</a></li>
-                <li><a href="#">What We Do?</a></li>
-                <li><a href="#">Trending News</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#home" aria-label="Home">Home</a></li>
+                    <li><a href="#why-us" aria-label="Why Us?">Why Us?</a></li>
+                    <li><a href="#what-we-do" aria-label="What We Do?">What We Do?</a></li>
+                    <li><a href="#news" aria-label="Trending News">Trending News</a></li>
+                    <!-- <li><a href="#prod-data" aria-label="Product Data">Product Data</a></li> -->
+                    <li><a href="#contact-us" aria-label="Contact Us">Contact Us</a></li>
+                    <li><a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a></li>
+                    <li><a href="#tos" aria-label="Terms of Use">Terms of Use</a></li>
             </ul>
         </header>
 
-        <section id="home">
-            <div id="slideshow-container">
-                <div class="slide fade">
-                    <img src="./images/1.jpg" style="width: 100%;" alt="Image 1">
+        <section id="home" role="banner" aria-labelledby="home-banner">
+            <div id="slideshow-container" aria-live="polite">
+                <div class="slide fade" role="region" aria-labelledby="home-banner">
+                    <img src="./images/1.jpg" style="width: 100%;" alt="home-banner1" loading="lazy">
                     <div class="text">
                         <h1>Welcome to Astound Digital</h1>
                         <p>_____Navigating what's next.</p>
                     </div>
                 </div>
-                <div class="slide fade">
-                    <img src="./images/2.jpg" style="width: 100%;" alt="Image 2">
+                <div class="slide fade" role="region" aria-labelledby="innovative-solutions-banner">
+                    <img src="./images/2.jpg" style="width: 100%;" alt="home-banner2" loading="lazy">
                     <div class="text">
                         <h1>Innovative Solutions</h1>
                         <p>Delivering top-notch services to meet your needs.</p>
                     </div>
                 </div>
-                <div class="slide fade">
-                    <img src="./images/3.jpg" style="width: 100%;" alt="Image 3">
+                <div class="slide fade"  role="region" aria-labelledby="quality-first-banner">
+                    <img src="./images/3.jpg" style="width: 100%;" alt="home-banner3" loading="lazy">
                     <div class="text">
                         <h1>Quality First</h1>
                         <p>We focus on quality and customer satisfaction.</p>
                     </div>
                 </div>
-                <div class="slide fade">
-                    <img src="./images/4.jpg" style="width: 100%;" alt="Image 4">
+                <div class="slide fade" role="region" aria-labelledby="join-us-banner">
+                    <img src="./images/4.jpg" style="width: 100%;" alt="home-banner4" loading="lazy">
                     <div class="text">
                         <h1>Join Us Today</h1>
                         <p>Experience excellence in every product we offer.</p>
@@ -55,78 +63,89 @@
             
         </section>
 
-        <section id="why-us">
+        <section id="why-us" role="region">
             <h1>Why Choose Us?</h1>
 
             <div class="cards">
-                <div>
+                <div role="article">
                     <h3>Reliable Quality</h3>
                     <p>We offer products crafted with care and precision, ensuring that every item meets the highest quality standards.</p>
                 </div>
 
-                <div>
+                <div role="article">
                     <h3>Customer Satisfaction</h3>
                     <p>We prioritize customer satisfaction, offering top-notch support and services to meet your needs.</p>
                 </div>
             </div>
         </section>
 
-        <section id="what-we-do">
+        <section id="what-we-do" role="region">
             <h1>What We Do?</h1>
             <p>We specialize in providing high-quality products and services that cater to the unique needs of our customers. Our focus is on delivering value, reliability, and exceptional customer experiences. Whether you're looking for product design, consulting services, or custom solutions, we have the expertise to deliver excellence in every project.</p>
             
             <div class="cards">
-                <div>
+                <div role="article">
                     <h3>Product Development</h3>
                     <p>Our team of experts is dedicated to designing and developing products that not only meet but exceed industry standards.</p>
                 </div>
-                <div>
+                <div role="article">
                     <h3>Consulting Services</h3>
                     <p>We offer expert consulting services to help businesses enhance their operations and drive long-term success.</p>
                 </div>
-                <div>
+                <div role="article">
                     <h3>Custom Solutions</h3>
                     <p>We tailor solutions to your specific needs, ensuring that you get the most out of every interaction with us.</p>
                 </div>
             </div>
         </section>
 
-        <section id="news">
+        <section id="news" role="region">
             <h1>Trending News About Us
             </h1>
             <div class="cards">
-                <div>
+                <div role="article">
                     <h3>New Product Launch</h3>
                     <p>We are excited to announce the launch of our latest product. Stay tuned for more details.</p>
                 </div>
-                <div>
+                <div role="article">
                     <h3>Customer Review of the Month</h3>
                     <p>Check out what our happy customers have to say about our products and services.</p>
                 </div>
-                <div>
+                <div role="article">
                     <h3>Behind the Scenes</h3>
                     <p>Get a sneak peek into how we create and design the products you love.</p>
                 </div>
-                <div>
+                <div role="article">
                     <h3>Upcoming Events</h3>
                     <p>Join us at our upcoming events and learn more about what we do and our future plans.</p>
                 </div>
             </div>
         </section>
+
+        <!-- <section id="prod-data" role="region">
+            <h1>Product Data</h1>
+            <div class="cards" id="product-cards">
+            </div>
+        </section> -->
         
         <section id="contact-us">
             <h1>Contact Us</h1>
-            <form action="">
-                <input type="text" placeholder="Your Name" id="name" required>
-                <input type="email" placeholder="Your Email" id="email" required>
-                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                <input type="submit" class="send-btn" name="button" value="Send Message"></input>
+            <form action="" role="form" aria-labelledby="contact-form">
+                <input type="text" placeholder="Your Name" id="name" required aria-required="true" onkeydown="return /[a-z\s]/i.test(event.key)" >
+                <p class="error"  role="alert" id="name-error">Enter a valid Name!</p>
+                <input type="email" placeholder="Your Email" id="email" required aria-required="true">
+                <p class="error"  role="alert" id="email-error">Enter a valid email!</p>
+                <textarea  name="message" id="message" placeholder="Your Message" required aria-required="true"></textarea>
+                <p class="error"  role="alert" id="message-error">Message must be between 10 to 200 characters.</p>
+                <input type="submit" class="send-btn" name="button" value="Send Message"></input>           
+                
+                
             </form>
             
             
         </section>
 
-        <section id="privacy">
+        <section id="privacy" role="document">
             <h1>Privacy Policy</h1>
             <p>At Astound Digital, we respect your privacy. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
             <h4>Information We Collect</h4>
@@ -135,16 +154,16 @@
             <p>We use the information to process your orders, improve our website, send you marketing materials, and enhance your overall shopping experience.</p>
         </section>
 
-        <section id="tos">
+        <section id="tos" role="document">
             <h1>Terms of Service</h1>
             <p>By using our website and services, you agree to comply with the following terms and conditions. Please read these terms carefully before proceeding.</p>
         </section>
 
-        <footer>
+        <footer role="contentinfo">
                 <p>&copy 2024 Astound Digital. All Rights Reserved.</p>
-                <div id="links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
+                <div id="links" role="navigation">
+                    <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
+                    <a href="#tos" aria-label="Terms of Use">Terms of Use</a>
                 </div>
         </footer>
     
